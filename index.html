@@ -1,0 +1,513 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="NexEntry builds modern websites and practical automations for local businesses. Enter different. Build bigger.">
+  <title>NexEntry | Enter Different. Build Bigger.</title>
+  <script>document.documentElement.classList.add('js');</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Preloader -->
+  <div class="preloader" id="preloader" aria-hidden="true">
+    <div class="preloader-inner">
+      <!-- Your custom logo -->
+    <img
+      src="logo1.png"
+      alt=""
+      class="preloader-mark"
+    />
+      <span class="preloader-text">NEXENTRY</span>
+      <div class="preloader-bar"><i></i></div>
+    </div>
+  </div>
+
+  <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
+  <div class="cursor-glow" id="cursor-glow" aria-hidden="true"></div>
+  <div class="cursor-ring" id="cursor-ring" aria-hidden="true"></div>
+  <div class="noise" aria-hidden="true"></div>
+
+  <header class="site-header" id="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#home" aria-label="NexEntry home">
+        <img
+      src="logo1.png"
+      alt=""
+      class="preloader-mark1"
+    />
+        <span>NEXENTRY</span>
+      </a>
+
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open navigation menu">
+        <span></span><span></span>
+      </button>
+
+      <nav class="primary-nav" id="primary-nav" aria-label="Main navigation">
+        <a href="#home" data-nav>Home</a>
+        <a href="#about" data-nav>About</a>
+        <a href="#services" data-nav>Services</a>
+        <a href="#process" data-nav>Process</a>
+        <a href="#work" data-nav>Our Work</a>
+        <a class="nav-cta magnetic" href="#contact">Contact Us <span aria-hidden="true">↗</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero" id="home" aria-labelledby="hero-title">
+      <canvas class="hero-canvas" id="hero-canvas" aria-hidden="true"></canvas>
+      <div class="hero-orb orb-a" aria-hidden="true"></div>
+      <div class="hero-orb orb-b" aria-hidden="true"></div>
+      <div class="hero-lines" aria-hidden="true"></div>
+
+      <div class="float-shapes" id="float-shapes" aria-hidden="true">
+        <span class="shape shape-ring" data-depth="22"></span>
+        <span class="shape shape-plus" data-depth="34">+</span>
+        <span class="shape shape-dot" data-depth="46"></span>
+        <span class="shape shape-square" data-depth="28"></span>
+        <span class="shape shape-plus plus-two" data-depth="18">+</span>
+        <span class="shape shape-ring ring-two" data-depth="38"></span>
+      </div>
+
+      <div class="hero-grid container">
+        <div class="hero-copy">
+          <p class="eyebrow reveal">
+            <span class="eyebrow-dot"></span>
+            Your digital growth partner
+          </p>
+          <h1 id="hero-title" class="reveal" style="--d:.08s">
+            <span class="line split">Enter Different.</span>
+            <span class="line accent"><span class="glitch shimmer split" data-text="Build Bigger.">Build Bigger.</span></span>
+          </h1>
+          <p class="hero-rotator reveal" style="--d:.16s">
+            We craft <span class="rotator" id="rotator" aria-live="off">websites</span><span class="caret" aria-hidden="true"></span>
+          </p>
+          <p class="hero-description reveal" style="--d:.22s">
+            We build modern websites and smart automations that help local businesses grow, save time, and serve customers better.
+          </p>
+          <div class="hero-actions reveal" style="--d:.3s">
+            <a class="button button-primary magnetic" href="#contact"><span>Let’s Build Your Website</span> <b aria-hidden="true">↗</b></a>
+            <a class="button button-quiet magnetic" href="#services"><span>Explore Services</span> <b aria-hidden="true">↓</b></a>
+          </div>
+          <div class="hero-proof reveal" style="--d:.38s">
+            <div class="proof-symbol" aria-hidden="true"><span></span><span></span><span></span></div>
+            <p>Small team. Thoughtful technology.<br><strong>Built around your business.</strong></p>
+          </div>
+        </div>
+
+        <div class="hero-art reveal" style="--d:.2s" aria-label="Illustration of a business website and connected workflow">
+          <div class="art-label"><span class="status-dot"></span> DIGITAL, MADE PRACTICAL</div>
+
+          <div class="tilt-wrap" id="tilt">
+            <div class="browser-card">
+              <div class="browser-top">
+                <div class="browser-dots"><i></i><i></i><i></i></div>
+                <div class="address-bar">yourbusiness.com</div>
+                <span class="browser-lock" aria-hidden="true">⌑</span>
+              </div>
+              <div class="mock-site">
+                <div class="mock-nav">
+                  <span class="mock-logo"><b></b> YOUR BRAND</span>
+                  <span class="mock-nav-lines"><i></i><i></i><i></i></span>
+                </div>
+                <div class="mock-content">
+                  <div class="mock-copy">
+                    <span class="mock-kicker">MADE FOR YOUR NEIGHBOURHOOD</span>
+                    <b>Good things<br>start right here.</b>
+                    <span class="mock-button">Explore the menu <i>↗</i></span>
+                  </div>
+                  <div class="mock-photo" aria-hidden="true">
+                    <div class="cup"><span></span></div>
+                    <div class="plate"></div>
+                    <div class="steam steam-one"></div>
+                    <div class="steam steam-two"></div>
+                    <div class="steam steam-three"></div>
+                  </div>
+                </div>
+                <div class="mock-bars" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+                <div class="mock-footer">
+                  <span>Freshly made, every day</span>
+                  <span class="mock-footer-line"></span>
+                  <span>Open today · 8am–6pm</span>
+                </div>
+              </div>
+              <div class="scan-line" aria-hidden="true"></div>
+            </div>
+
+            <div class="workflow-card">
+              <span class="workflow-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M5 12h13M13 6l6 6-6 6"/></svg>
+              </span>
+              <span><b>New enquiry</b><small>Captured and organized</small></span>
+              <span class="workflow-check" aria-hidden="true">✓</span>
+            </div>
+
+            <div class="chip-card chip-speed" aria-hidden="true">
+              <span class="chip-ring"></span>
+              <span><b>Fast</b><small>Mobile ready</small></span>
+            </div>
+          </div>
+
+          <div class="art-caption">
+            <span>01</span>
+            <span>ONE CLEARER WAY FORWARD</span>
+            <span class="caption-rule"></span>
+          </div>
+          <div class="orbit orbit-one" aria-hidden="true"></div>
+          <div class="orbit orbit-two" aria-hidden="true"></div>
+        </div>
+      </div>
+
+      <div class="hero-bottom container">
+        <span>WEB DESIGN</span><i></i>
+        <span>SMART AUTOMATION</span><i></i>
+        <span>LOCAL BUSINESS</span>
+        <a href="#about" aria-label="Scroll to about NexEntry">Scroll to explore <span class="scroll-arrow" aria-hidden="true">↓</span></a>
+      </div>
+    </section>
+
+    <!-- MARQUEE -->
+    <div class="marquee" id="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <div class="marquee-group">
+          <span>WEBSITES</span><em>✦</em><span>AUTOMATION</span><em>✦</em><span>DIGITAL PRESENCE</span><em>✦</em><span>WHATSAPP</span><em>✦</em><span>LANDING PAGES</span><em>✦</em><span>ENQUIRY TRACKING</span><em>✦</em>
+        </div>
+        <div class="marquee-group">
+          <span>WEBSITES</span><em>✦</em><span>AUTOMATION</span><em>✦</em><span>DIGITAL PRESENCE</span><em>✦</em><span>WHATSAPP</span><em>✦</em><span>LANDING PAGES</span><em>✦</em><span>ENQUIRY TRACKING</span><em>✦</em>
+        </div>
+      </div>
+    </div>
+
+    <!-- ABOUT -->
+    <section class="about section-pad" id="about" aria-labelledby="about-title">
+      <div class="container about-grid">
+        <div class="section-intro reveal">
+          <p class="eyebrow">A little about us</p>
+          <h2 id="about-title">Small Team.<br><span>Big Ideas.</span></h2>
+          <div class="about-stats">
+            <div class="stat"><b data-count="3">0</b><span>Core services</span></div>
+            <div class="stat"><b data-count="100" data-suffix="%">0</b><span>Made for you</span></div>
+            <div class="stat"><b data-count="1">0</b><span>Focused team</span></div>
+          </div>
+        </div>
+        <div class="about-copy reveal" style="--d:.12s">
+          <p class="about-lead">NexEntry is a student-founded engineering startup focused on helping local businesses use technology to solve everyday problems.</p>
+          <p>From building your first website to automating repetitive tasks, we turn practical ideas into digital solutions. Clear communication, useful tools, and work shaped around the way you do business.</p>
+          <a class="text-link" href="#contact">Let’s talk about your next step <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="about-ribbon reveal" aria-hidden="true">
+          <span>ENGINEERED WITH CURIOSITY</span>
+          <b>NE</b>
+          <span>MADE FOR THE EVERYDAY</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="services section-pad" id="services" aria-labelledby="services-title">
+      <div class="container">
+        <div class="section-heading">
+          <div class="reveal">
+            <p class="eyebrow">What we can do together</p>
+            <h2 id="services-title">Digital tools that<br><span>do real work.</span></h2>
+          </div>
+          <p class="reveal" style="--d:.1s">Good technology should make running your business feel a little simpler. Start with what you need today; build from there.</p>
+        </div>
+
+        <div class="service-grid">
+          <article class="service-card spotlight tilt-card reveal">
+            <span class="card-number" aria-hidden="true">01</span>
+            <div class="service-top">
+              <span class="service-icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 6.5h.01M11 6.5h.01M8 13h8M8 16h5"/></svg>
+              </span>
+              <span class="service-index">01 / 03</span>
+            </div>
+            <h3>Website<br>Development</h3>
+            <p>A polished, mobile-ready home for your business that helps customers find you and take the next step.</p>
+            <ul>
+              <li>Business websites</li>
+              <li>Landing pages</li>
+              <li>Contact and enquiry forms</li>
+              <li>Mobile-friendly design</li>
+            </ul>
+            <a class="card-link" href="#contact" aria-label="Ask about website development">Explore this service <span aria-hidden="true">↗</span></a>
+          </article>
+
+          <article class="service-card spotlight tilt-card reveal" style="--d:.12s">
+            <span class="card-number" aria-hidden="true">02</span>
+            <div class="service-top">
+              <span class="service-icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 17.5 9 12l3.5 3.5L20 7"/><path d="M14 7h6v6"/><circle cx="5" cy="6" r="2"/><circle cx="19" cy="18" r="2"/></svg>
+              </span>
+              <span class="service-index">02 / 03</span>
+            </div>
+            <h3>Business<br>Automation</h3>
+            <p>Practical workflows that keep enquiries, appointments, and the repetitive bits moving along.</p>
+            <ul>
+              <li>Enquiry tracking</li>
+              <li>Appointment workflows</li>
+              <li>Form and spreadsheet automation</li>
+              <li>Repetitive task automation</li>
+            </ul>
+            <a class="card-link" href="#contact" aria-label="Ask about business automation">Explore this service <span aria-hidden="true">↗</span></a>
+          </article>
+
+          <article class="service-card spotlight tilt-card reveal" style="--d:.24s">
+            <span class="card-number" aria-hidden="true">03</span>
+            <div class="service-top">
+              <span class="service-icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3.5 9h17M3.5 15h17M12 3c2.2 2.4 3.3 5.4 3.3 9S14.2 18.6 12 21c-2.2-2.4-3.3-5.4-3.3-9S9.8 5.4 12 3Z"/></svg>
+              </span>
+              <span class="service-index">03 / 03</span>
+            </div>
+            <h3>Digital<br>Presence</h3>
+            <p>Make it easier for people to discover your business and get in touch wherever they find you.</p>
+            <ul>
+              <li>Business profile setup</li>
+              <li>WhatsApp integration</li>
+              <li>Website content assistance</li>
+              <li>Consistent brand details</li>
+            </ul>
+            <a class="card-link" href="#contact" aria-label="Ask about digital presence">Explore this service <span aria-hidden="true">↗</span></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section class="process section-pad" id="process" aria-labelledby="process-title">
+      <div class="container">
+        <div class="section-heading">
+          <div class="reveal">
+            <p class="eyebrow">How we work</p>
+            <h2 id="process-title">From idea to <span>launch.</span></h2>
+          </div>
+          <p class="reveal" style="--d:.1s">A simple, clear path so you always know what happens next.</p>
+        </div>
+
+        <ol class="process-steps" id="process-steps">
+          <li class="step reveal">
+            <span class="step-dot"><b>01</b></span>
+            <h3>Discover</h3>
+            <p>We listen to your goals, your customers, and what slows you down today.</p>
+          </li>
+          <li class="step reveal" style="--d:.12s">
+            <span class="step-dot"><b>02</b></span>
+            <h3>Design</h3>
+            <p>A clear look and layout shaped around your brand and your visitors.</p>
+          </li>
+          <li class="step reveal" style="--d:.24s">
+            <span class="step-dot"><b>03</b></span>
+            <h3>Build</h3>
+            <p>We develop it carefully, test it on real screens, and refine the details.</p>
+          </li>
+          <li class="step reveal" style="--d:.36s">
+            <span class="step-dot"><b>04</b></span>
+            <h3>Launch &amp; grow</h3>
+            <p>Go live, then keep improving as your business grows.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- WORK -->
+    <section class="work section-pad" id="work" aria-labelledby="work-title">
+      <div class="container">
+        <div class="section-heading work-heading">
+          <div class="reveal">
+            <p class="eyebrow">A glimpse of what’s possible</p>
+            <h2 id="work-title">Ideas, made <span>visible.</span></h2>
+          </div>
+          <p class="reveal" style="--d:.1s">These demo concepts show a direction, not completed client projects. Your business deserves a design made for you.</p>
+        </div>
+
+        <div class="project-grid">
+          <article class="project-card tilt-card project-cafe reveal">
+            <div class="project-visual cafe-visual" aria-hidden="true">
+              <div class="cafe-browser">
+                <div class="project-browserbar"><i></i><i></i><i></i><span>littlecorner.cafe</span></div>
+                <div class="cafe-page">
+                  <div class="cafe-nav"><b>little corner</b><span>MENU　 OUR STORY　 VISIT</span></div>
+                  <div class="cafe-hero">
+                    <small>YOUR NEW FAVOURITE SPOT</small>
+                    <strong>Slow mornings.<br>Good coffee.</strong>
+                    <span>MADE WITH CARE, SERVED WITH A SMILE</span>
+                    <i>FIND YOUR TABLE　↗</i>
+                  </div>
+                  <div class="cafe-art">
+                    <div class="cafe-sun"></div>
+                    <div class="cup-art"></div>
+                  </div>
+                </div>
+              </div>
+              <span class="concept-stamp">CONCEPT / 01</span>
+            </div>
+            <div class="project-info">
+              <div>
+                <span class="project-type">HOSPITALITY · WEB DESIGN</span>
+                <h3>Cafe Website Demo</h3>
+              </div>
+              <a href="#contact" aria-label="Discuss a cafe website project">↗</a>
+            </div>
+          </article>
+
+          <article class="project-card tilt-card project-coaching reveal" style="--d:.14s">
+            <div class="project-visual coaching-visual" aria-hidden="true">
+              <div class="coaching-browser">
+                <div class="project-browserbar"><i></i><i></i><i></i><span>northstarlearn.in</span></div>
+                <div class="coaching-page">
+                  <div class="coach-nav">
+                    <b><span>✳</span> NORTHSTAR</b>
+                    <span>PROGRAMS　 RESULTS　 ABOUT</span>
+                    <i>LET’S TALK ↗</i>
+                  </div>
+                  <div class="coach-content">
+                    <div class="coach-copy">
+                      <small>YOUR NEXT CHAPTER STARTS HERE</small>
+                      <strong>Find your<br>way forward.</strong>
+                      <span>Focused learning. A plan that fits you.</span>
+                      <i>EXPLORE PROGRAMS　↗</i>
+                    </div>
+                    <div class="coach-graphic">
+                      <div class="graphic-ring ring-a"></div>
+                      <div class="graphic-ring ring-b"></div>
+                      <div class="graphic-star">✳</div>
+                      <span>01<br>FOCUS</span>
+                    </div>
+                  </div>
+                  <div class="coach-bottom">
+                    <span>PERSONAL GUIDANCE</span>
+                    <span>BUILT AROUND YOUR GOALS</span>
+                    <span>✳</span>
+                  </div>
+                </div>
+              </div>
+              <span class="concept-stamp">CONCEPT / 02</span>
+            </div>
+            <div class="project-info">
+              <div>
+                <span class="project-type">EDUCATION · WEB DESIGN</span>
+                <h3>Coaching Center Website Demo</h3>
+              </div>
+              <a href="#contact" aria-label="Discuss a coaching center website project">↗</a>
+            </div>
+          </article>
+        </div>
+        <p class="demo-note"><span aria-hidden="true">*</span> Demo concepts only. No client work is represented here.</p>
+      </div>
+    </section>
+
+    <!-- CTA BAND -->
+    <section class="cta-band" aria-label="Call to action">
+      <div class="cta-glow" aria-hidden="true"></div>
+      <div class="sparkles" aria-hidden="true">
+        <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+      </div>
+      <div class="container cta-inner reveal">
+        <h2>Ready to enter <span>different?</span></h2>
+        <a class="button button-dark magnetic" href="#contact"><span>Start a conversation</span> <b aria-hidden="true">↗</b></a>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact section-pad" id="contact" aria-labelledby="contact-title">
+      <div class="container contact-grid">
+        <div class="contact-copy">
+          <p class="eyebrow reveal">The next move is yours</p>
+          <h2 id="contact-title" class="reveal" style="--d:.06s">Have an Idea?<br><span>Let’s Build It.</span></h2>
+          <p class="contact-intro reveal" style="--d:.12s">Tell us about your business and what you need. We would love to explore how NexEntry can help.</p>
+          <div class="contact-details reveal" style="--d:.18s">
+            <div>
+              <span class="contact-label">EMAIL</span>
+              <span class="contact-value">your-email@example.com</span>
+              <span class="contact-note">Email placeholder</span>
+            </div>
+            <div>
+              <span class="contact-label">WHATSAPP</span>
+              <span class="contact-value">Add your WhatsApp number</span>
+              <span class="contact-note">Contact placeholder</span>
+            </div>
+          </div>
+          <div class="contact-mark" aria-hidden="true">N<span>.</span>E</div>
+        </div>
+
+        <form class="contact-form spotlight reveal" style="--d:.1s" id="contact-form" novalidate>
+          <div class="form-heading">
+            <span>01 — START A CONVERSATION</span>
+            <span class="form-required">* Required</span>
+          </div>
+          <div class="form-row">
+            <div class="field">
+              <label for="name">Your name <span>*</span></label>
+              <input id="name" name="name" type="text" autocomplete="name" placeholder="e.g. Alex Morgan" required minlength="2" maxlength="80">
+            </div>
+            <div class="field">
+              <label for="business">Business name <span>*</span></label>
+              <input id="business" name="business" type="text" autocomplete="organization" placeholder="e.g. Corner House Cafe" required minlength="2" maxlength="100">
+            </div>
+          </div>
+          <div class="field">
+            <label for="email">Email address <span>*</span></label>
+            <input id="email" name="email" type="email" autocomplete="email" placeholder="you@yourbusiness.com" required maxlength="254">
+          </div>
+          <div class="field">
+            <label for="service">Service required <span>*</span></label>
+            <select id="service" name="service" required>
+              <option value="" selected disabled>Select a service</option>
+              <option value="website">Website Development</option>
+              <option value="automation">Business Automation</option>
+              <option value="presence">Digital Presence</option>
+              <option value="unsure">Not sure yet</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="description">Tell us a little about your project <span>*</span></label>
+            <textarea id="description" name="description" rows="4" placeholder="What would you like to make easier or build?" required minlength="10" maxlength="1500"></textarea>
+          </div>
+          <button class="button button-primary form-submit magnetic" type="submit"><span>Submit Enquiry</span> <b aria-hidden="true">↗</b></button>
+          <p class="form-status" id="form-status" role="status" aria-live="polite">This demo form does not send messages yet.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-giant" id="footer-giant" aria-hidden="true">NEXENTRY</div>
+    <div class="container footer-main">
+      <div class="footer-brand-block">
+        <a class="footer-logo" href="#home" aria-label="NexEntry home">
+          <img src="logo.jpg" alt="NexEntry logo. Enter Different. Build Bigger." width="1024" height="1024" loading="lazy">
+        </a>
+      </div>
+      <div class="footer-nav">
+        <span class="footer-label">EXPLORE</span>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#process">Process</a>
+        <a href="#work">Our Work</a>
+        <a href="#contact">Contact Us</a>
+      </div>
+      <div class="footer-signoff">
+        <span class="footer-label">BUILT FOR WHAT’S NEXT</span>
+        <p>Websites and practical technology<br>for local business.</p>
+        <a href="#contact">Start a conversation <span aria-hidden="true">↗</span></a>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span>© <span id="copyright-year"></span> NexEntry</span>
+      <span>Student-founded. Future-focused.</span>
+      <a href="#home">Back to top ↑</a>
+    </div>
+  </footer>
+</body>
+</html>
