@@ -400,22 +400,62 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   // ---------- Form demo handling ----------
-  const form = document.getElementById("contact-form");
-  const status = document.getElementById("form-status");
-  if (form && status) {
-    form.addEventListener("submit", (e) => {
-      e.preventDefault();
-      if (!form.checkValidity()) {
-        status.textContent = "Please fill in all required fields correctly.";
+  
+const form = document.getElementById("contact-form");
+const status = document.getElementById("form-status");
+
+if (form && status) {
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    if (!form.checkValidity()) {
+      status.textContent =
+        "Please fill in all required fields correctly.";
+      status.className = "form-status error";
+      form.reportValidity();
+      return;
+    }
+
+    const submitButton = form.querySelector(
+      'button[type="submit"]'
+    );
+
+    submitButton.disabled = true;
+    status.textContent = "Sending your enquiry...";
+    status.className = "form-status";
+
+    try {
+      const response = await fetch(form.action, {
+        method: "POST",
+        body: new FormData(form),
+        headers: {
+          Accept: "application/json"
+        }
+      });
+
+      if (response.ok) {
+        status.textContent =
+          "Thank you! Your enquiry has been sent successfully.";
+        status.className = "form-status success";
+
+        form.reset();
+      } else {
+        const data = await response.json().catch(() => ({}));
+
+        status.textContent =
+          data.errors
+            ? data.errors.map(error => error.message).join(", ")
+            : "Unable to send your enquiry. Please try again.";
         status.className = "form-status error";
-        form.classList.remove("shake"); void form.offsetWidth; form.classList.add("shake");
-        form.reportValidity();
-        return;
       }
-      status.textContent = "Thanks! This is a demo — your enquiry was not sent.";
-      status.className = "form-status success";
-      confetti(form.querySelector(".form-submit"));
-      form.reset();
-    });
-  }
+    } catch (error) {
+      status.textContent =
+        "Network error. Please check your connection and try again.";
+      status.className = "form-status error";
+    } finally {
+      submitButton.disabled = false;
+    }
+  });
+}
+
 });
